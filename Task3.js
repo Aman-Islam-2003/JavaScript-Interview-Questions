@@ -4,7 +4,8 @@
 let string1 = "Hello World";
 
 const reverseWords = (str)=>{
-   let strArray = str.trim().split(/\s+/);
+    //Split the string into an array of words
+    const words = str.split(' ');
    //console.log(strArray);
    console.log(strArray.reverse());
 }
