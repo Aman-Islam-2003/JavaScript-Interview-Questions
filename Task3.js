@@ -5,14 +5,20 @@ let string1 = "Hello World";
 
 const reverseWords = (str)=>{
     //Split the string into an array of words
-    const words = str.split(' ');
-   //console.log(strArray);
-   console.log(strArray.reverse());
+   let characters = str.split(' ');
+   console.log(characters);
+
+   const reversedWords = characters.map((ch)=>{
+    return (ch.split('').reverse().join());
+   });
+   const reversedString = reversedWords.join(' ');
+   //console.log(reversedString);
+   return reversedString
 }
 
 
-reverseWords(string1); // Output: "olleH dlroW"
-// console.log(reverseWords("The quick brown fox")); // Output: "ehT kciuq nworb xof"
+//reverseWords(string1); // Output: "olleH dlroW"
+console.log(reverseWords("The quick brown fox")); // Output: "ehT kciuq nworb xof"
 
 // Words are separated by a single space.
 // You can assume that the input string does not have leading or trailing spaces.
